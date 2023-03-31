@@ -36,4 +36,3 @@ angular.module("myApp", []).controller("MyController", [
     };
   },
 ]);
-miao;
