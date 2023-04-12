@@ -130,7 +130,7 @@ modifiche container contenuti approfondimento
   font-weight: 700;
 }
 
-.container-principale.approfondimento svg {
+.container-principale.approfondimento img {
   margin-right: 24px;
 }
 
@@ -291,6 +291,6 @@ modifiche container contenuti archivio
   align-items: center;
 }
 
-.rightlist svg {
+.rightlist img {
   margin-right: 8px;
 }

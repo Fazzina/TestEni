@@ -17,6 +17,539 @@
   </head>
 
   <body>
-    <div ng-include="paginaCorrente" ng-controller="MainController"></div>
+    <div ng-controller="MainController">
+      <div class="container self-assessment" ng-show="showSelfAssessment">
+        <div class="colonna-navbar">
+          <nav class="side-navbar">
+            <ul>
+              <li>
+                <a href="">
+                  <svg
+                    width="42"
+                    height="42"
+                    viewBox="0 0 42 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="21" cy="21" r="21" fill="#FFD401" />
+                    <path
+                      d="M19 21H31"
+                      stroke="#1C1C1B"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19 28H31"
+                      stroke="#1C1C1B"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19 14H31"
+                      stroke="#1C1C1B"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 26H11V30H15V26Z"
+                      stroke="#1C1C1B"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 19H11V23H15V19Z"
+                      stroke="#1C1C1B"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 12H11V16H15V12Z"
+                      stroke="#1C1C1B"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span style="font-weight: bold">Self Assessment</span>
+                </a>
+              </li>
+              <li>
+                <a href="" ng-click="switchSelfAppr()">
+                  <svg
+                    width="42"
+                    height="42"
+                    viewBox="0 0 42 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="21" cy="21" r="21" fill="#1C1C1B" />
+                    <path
+                      d="M11.5 27.5C11.5 23.6484 11.5 14.5 11.5 14.5C11.5 12.8431 12.8431 11.5 14.5 11.5H25.5V24.5C25.5 24.5 17.1163 24.5 14.5 24.5C12.85 24.5 11.5 25.8421 11.5 27.5Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M25.5 24.5C25.5 24.5 15.0768 24.5 14.5 24.5C12.8431 24.5 11.5 25.8432 11.5 27.5C11.5 29.1568 12.8431 30.5 14.5 30.5C15.6046 30.5 20.9379 30.5 28.5 30.5V12.5"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 27.5H25"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span>Approfondimento</span>
+                </a>
+              </li>
+              <li>
+                <a href="" ng-click="switchSelfArch()">
+                  <svg
+                    width="42"
+                    height="42"
+                    viewBox="0 0 42 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="21" cy="21" r="21" fill="#1C1C1B" />
+                    <path
+                      d="M25 12H20V30H25V12Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M30 12H25V30H30V12Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M14 12L18 12.5L16.25 30L12 29.5L14 12Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M27.5 18V16.5"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M22.5 18V16.5"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span>Archivio</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="colonna-contenuti">
+          <div class="container-principale self-assesstment">
+            <img src="pngs/hse logo.svg" alt="hse logo" />
+            <h1>Scopri il tuo livello di commitment</h1>
+            <p class="self-assesstment" ng-bind="textSelfassessment"></p>
+            <img
+              src="pngs/30mindom.svg"
+              style="margin-inline: auto; display: grid; margin-top: 33px"
+            />
+            <button class="self-assesstment">Inizia il test</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container approfondimento" ng-show="showApprofondimento">
+        <div class="colonna-navbar">
+          <nav class="side-navbar">
+            <ul>
+              <li>
+                <a href="" ng-click="switchSelfAppr()">
+                  <svg
+                    width="42"
+                    height="42"
+                    viewBox="0 0 42 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="21" cy="21" r="21" fill="#1C1C1B" />
+                    <path
+                      d="M19 21H31"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19 28H31"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19 14H31"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 26H11V30H15V26Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 19H11V23H15V19Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 12H11V16H15V12Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span>Self Assessment</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    width="42"
+                    height="42"
+                    viewBox="0 0 42 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="21" cy="21" r="21" fill="#FFD401" />
+                    <path
+                      d="M11.5 27.5C11.5 23.6484 11.5 14.5 11.5 14.5C11.5 12.8431 12.8431 11.5 14.5 11.5H25.5V24.5C25.5 24.5 17.1163 24.5 14.5 24.5C12.85 24.5 11.5 25.8421 11.5 27.5Z"
+                      stroke="#1C1C1B"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M25.5 24.5C25.5 24.5 15.0768 24.5 14.5 24.5C12.8431 24.5 11.5 25.8432 11.5 27.5C11.5 29.1568 12.8431 30.5 14.5 30.5C15.6046 30.5 20.9379 30.5 28.5 30.5V12.5"
+                      stroke="#1C1C1B"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 27.5H25"
+                      stroke="#1C1C1B"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span style="font-weight: bold">Approfondimento</span>
+                </a>
+              </li>
+              <li>
+                <a href="" ng-click="switchApprArch()">
+                  <svg
+                    width="42"
+                    height="42"
+                    viewBox="0 0 42 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="21" cy="21" r="21" fill="#1C1C1B" />
+                    <path
+                      d="M25 12H20V30H25V12Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M30 12H25V30H30V12Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M14 12L18 12.5L16.25 30L12 29.5L14 12Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M27.5 18V16.5"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M22.5 18V16.5"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span>Archivio</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="colonna-contenuti">
+          <div class="container-principale approfondimento">
+            <div class="head">
+              <h1 id="approfondimento">
+                Un test per migliorare le tue performance
+              </h1>
+              <p class="approfondimento" ng-bind="textApprofondimento"></p>
+            </div>
+            <div class="content" style="margin-top: 60px">
+              <ul>
+                <li>
+                  <img src="pngs/approf1.svg" />
+                  <div class="text-container">
+                    <span><b>Valuta il tuo commitment</b></span>
+                    <p>
+                      L’obiettivo è aiutarti a raggiungere i più alti standard
+                      HSE in termini di processi e risultati.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <img src="pngs/approf2.svg" />
+                  <div class="text-container">
+                    <span><b>È interattivo</b></span>
+                    <p>
+                      Nel test troverai tante tipologie di domande e altrettante
+                      modalità di risposta.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <img src="pngs/approf3.svg" />
+                  <div class="text-container">
+                    <span><b>Non ruba tempo</b></span>
+                    <p>
+                      Il test dura meno di una riunione e puoi salvare i tuo
+                      progressi per riprendere quando vuoi.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <img src="pngs/approf4.svg" />
+                  <div class="text-container">
+                    <span><b>Ti dà più di quanto chiede</b></span>
+                    <p>
+                      Dopo il test otterrai un’analisi dei risultati, un poster
+                      e una guida su come pianificare le tue attività.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container archivio" ng-show="showArchivio">
+        <div class="colonna-navbar">
+          <nav class="side-navbar">
+            <ul>
+              <li>
+                <a href="" ng-click="switchSelfArch()">
+                  <svg
+                    width="42"
+                    height="42"
+                    viewBox="0 0 42 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="21" cy="21" r="21" fill="#1C1C1B" />
+                    <path
+                      d="M19 21H31"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19 28H31"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19 14H31"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 26H11V30H15V26Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 19H11V23H15V19Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 12H11V16H15V12Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span>Self Assessment</span>
+                </a>
+              </li>
+              <li>
+                <a href="" ng-click="switchApprArch()">
+                  <svg
+                    width="42"
+                    height="42"
+                    viewBox="0 0 42 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="21" cy="21" r="21" fill="#1C1C1B" />
+                    <path
+                      d="M11.5 27.5C11.5 23.6484 11.5 14.5 11.5 14.5C11.5 12.8431 12.8431 11.5 14.5 11.5H25.5V24.5C25.5 24.5 17.1163 24.5 14.5 24.5C12.85 24.5 11.5 25.8421 11.5 27.5Z"
+                      stroke="white"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M25.5 24.5C25.5 24.5 15.0768 24.5 14.5 24.5C12.8431 24.5 11.5 25.8432 11.5 27.5C11.5 29.1568 12.8431 30.5 14.5 30.5C15.6046 30.5 20.9379 30.5 28.5 30.5V12.5"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15 27.5H25"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span>Approfondimento</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <svg
+                    width="42"
+                    height="42"
+                    viewBox="0 0 42 42"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="21" cy="21" r="21" fill="#FFD401" />
+                    <path
+                      d="M25 12H20V30H25V12Z"
+                      stroke="#1C1C1B"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M30 12H25V30H30V12Z"
+                      stroke="#1C1C1B"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M14 12L18 12.5L16.25 30L12 29.5L14 12Z"
+                      stroke="#1C1C1B"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M27.5 18V16.5"
+                      stroke="#1C1C1B"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M22.5 18V16.5"
+                      stroke="#1C1C1B"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <span style="font-weight: bold">Archivio</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="colonna-contenuti">
+          <div class="container-principale archivio">
+            <div class="head">
+              <h1 id="archivio">Archivio</h1>
+              <p class="archivio">
+                In caso ne avessi bisogno, puoi ripetere l’ultimo Self
+                Assessment per ottenere un nuovo commitment score oppure
+                consultare il report dell’Assessment dello scorso anno.
+              </p>
+            </div>
+            <div class="ripetiDiv">
+              <div class="leftcont">
+                <h3>Self Assessment</h3>
+                <p>
+                  Completa nuovamente il test per scoprire il tuo livello di
+                  conoscenza delle regole HSE. Ottieni uno score personalizzato
+                  ed entra in classifica insieme ai tuoi colleghi.
+                </p>
+                <button class="archivio">Ripeti</button>
+              </div>
+              <div>
+                <div class="rightlist">
+                  <ul>
+                    <li>
+                      <img src="pngs/arch1white.svg" />
+
+                      <p>Eseguito il <b>20/12/2021</b></p>
+                    </li>
+                    <li>
+                      <img src="pngs/arch2white.svg" />
+
+                      <p>Completato in <b>26</b> min</p>
+                    </li>
+                    <li>
+                      <img src="pngs/arch3white.svg" />
+
+                      <p><b>26</b> domande</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="reportDiv">
+              <div class="leftcont">
+                <h3>Self Assessment</h3>
+                <p>
+                  Consulta il report dell’Assessment dello scorso anno per
+                  confrontare i tuoi risultati.
+                </p>
+                <button class="archivio">Vai al report</button>
+              </div>
+              <div>
+                <div class="rightlist">
+                  <ul>
+                    <li>
+                      <img src="pngs/pngsarch1black.svg" />
+
+                      <p>Eseguito il <b>20/12/2021</b></p>
+                    </li>
+                    <li>
+                      <img src="pngs/pngsarch2black.svg" />
+                      <p>Completato in <b>26</b> min</p>
+                    </li>
+                    <li>
+                      <img src="pngs/pngsarch3black.svg" />
+                      <p><b>26</b> domande</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
