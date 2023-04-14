@@ -1,0 +1,244 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  background: #ffffff;
+  margin-top: 141px;
+}
+
+/*###############
+  modifiche sidebar
+  ###############*/
+.sidebar {
+  width: 245px;
+  background: #f6f6f6;
+  margin: 0;
+  height: auto;
+  zdisplay: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar ul {
+  margin-left: 102px;
+  margin-right: 111px;
+  margin-top: 56px;
+  padding: unset;
+}
+
+.sidebar li {
+  /* Number stepper */
+
+  /* Auto layout */
+
+  zpadding: 0px 8px;
+  gap: 10px;
+
+  background: #1c1c1b;
+  border-radius: 16px;
+
+  /* 01 */
+
+  width: 32px;
+  height: 32px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+
+  /* White */
+  color: #ffffff;
+
+  /* or 250% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  margin-bottom: 24px;
+}
+
+.sidebar li.selected {
+  background: #ffd401;
+  color: #1c1c1b;
+}
+
+.sidebar li.done {
+  color: #ffd401;
+}
+
+.sidebar img {
+  margin-left: 105px;
+  margin-top: -6px;
+}
+
+.sidebar p {
+  margin-top: 32px;
+
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  font-feature-settings: "kern" off;
+
+  /* Black */
+  color: #1c1c1b;
+}
+
+#nDomanda {
+  position: absolute;
+  left: 22.36%;
+  right: 73.4%;
+  top: 22.16%;
+  bottom: 71.75%;
+
+  /* H1 */
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 52px;
+  /* identical to box height, or 108% */
+
+  /* Gray-Light */
+
+  color: #dfe0e1;
+}
+
+.risSingola {
+  margin-left: 162px;
+  margin-top: 69px;
+}
+
+.domanda {
+  /* Body Large */
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0 0 32px 0;
+  /* Black */
+
+  color: #1c1c1b;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.apice {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 32px 0;
+  /* identical to box height, or 150% */
+
+  font-feature-settings: "kern" off;
+
+  /* Black */
+
+  color: #1c1c1b;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.risposte {
+  /* Risposta singola */
+
+  /* Auto layout */
+
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+  margin-bottom: 16px;
+  padding: 16px;
+  width: 736px;
+  max-height: 25px;
+
+  background: #dfe0e1;
+  border-radius: 2px;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #1c1c1b;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}
+
+input[type="radio"]:checked:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffd401;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.risSingola button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px;
+  gap: 10px;
+  margin-top: 32px;
+  width: 130px;
+  height: 46px;
+  background: transparent;
+  border: 1px solid #1c1c1b;
+  border-radius: 2px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  color: #1c1c1b;
+
+  cursor: pointer;
+}
+
+.risSingola .selected {
+  background-color: #1c1c1b;
+  color: #ffffff;
+}
+
+input[type="radio"]:checked {
+  border: 1px solid #ffffff;
+}
+
+.risSingola .active {
+  background: #ffd401;
+  color: #333333;
+  border: none;
+}

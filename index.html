@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://use.typekit.net/dkq0roq.css" />
-    <link href="style.css" rel="stylesheet" />
+    <link href="style/style.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="Controller/MainController.js"></script>
   </head>
@@ -156,7 +156,9 @@
               src="pngs/30mindom.svg"
               style="margin-inline: auto; display: grid; margin-top: 33px"
             />
-            <button class="self-assesstment">Inizia il test</button>
+            <button ng-click="redirect()" class="self-assesstment">
+              Inizia il test
+            </button>
           </div>
         </div>
       </div>

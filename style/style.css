@@ -103,6 +103,11 @@ modifiche container contenuti self-assesstment
   border: 0;
 }
 
+.container-principale button.self-assesstment:hover {
+  background: #2b2b29;
+  cursor: pointer;
+}
+
 /*###########################################
 modifiche container contenuti approfondimento
 ###########################################*/

@@ -1,6 +1,7 @@
 angular.module("myApp", []).controller("MainController", [
   "$scope",
-  function ($scope) {
+  "$window",
+  function ($scope, $window) {
     $scope.textSelfassessment =
       "Il Self Assessment è lo strumento che valuta il tuo impegno sui temi HSE (Sicurezza, Salute e Ambiente). È costituito da 5 moduli, ognuno dei quali si concentra su un obiettivo differente. Ti basteranno 30 minuti per completare il Self Assessment. Puoi salvare i tuoi progressi in qualsiasi momento e tornare più tardi.";
     $scope.textApprofondimento =
@@ -38,6 +39,10 @@ angular.module("myApp", []).controller("MainController", [
         $scope.showApprofondimento = true;
         $scope.showArchivio = false;
       }
+    };
+
+    $scope.redirect = function () {
+      $window.location.href = "test.html";
     };
   },
 ]);
