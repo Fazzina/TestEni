@@ -34,6 +34,7 @@ angular.module("myApp", []).controller("TestController", [
 
     $scope.options = ["Opzione 1", "Opzione 2", "Opzione 3", "Opzione 4"];
 
+    // $scope.selectedOptions = [false, false, false, false];
     //$scope.letters = ["a", "b", "c", "d"];
   },
 ]);

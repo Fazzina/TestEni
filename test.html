@@ -14,6 +14,7 @@
     <link href="style/test.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="Controller\TestController.js"></script>
+    <script src="script.js"></script>
   </head>
 
   <body>
@@ -30,7 +31,8 @@
         <p><b ng-bind="domande"></b> Domande</p>
       </div>
       <h1 id="nDomanda"><span ng-bind="currentPage"></span>.</h1>
-      <div class="risSingola">
+
+      <!-- <div class="risSingola rightCont">
         <p class="domanda">
           HSE si occupa di questioni molto tecniche.<br />
           A chi può essere delegata la comunicazione di tutti gli aspetti legati
@@ -40,7 +42,7 @@
         <form action="#">
           <div
             class="containerRisposte"
-            ng-init="letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']"
+            ng-init="letters = ['a', 'b', 'c', 'd']"
           >
             <div class="risposte" ng-repeat="option in options">
               <b style="margin-right: 16px">{{letters[$index] | uppercase}}</b>
@@ -56,24 +58,59 @@
           </div>
           <button id="prosegui" disabled>Prosegui</button>
         </form>
+      </div> -->
+
+      <!-- <div class="risMultipla rightCont">
+        <p class="domanda">
+          Un'indagine sulla sicurezza e/o sull'ambiente assegna azioni
+          correttive/preventive al mio reparto.<br />
+          Cosa fai?
+        </p>
+        <p class="apice">Seleziona due opzioni</p>
+        <form action="#">
+          <div
+            class="containerRisposte"
+            ng-init="letters = ['a', 'b', 'c', 'd']"
+          >
+            <div class="risposte" ng-repeat="option in options">
+              <b style="margin-right: 16px">{{letters[$index] | uppercase}}</b>
+              <input
+                type="checkbox"
+                ng-model="selectedOptions[$index]"
+                value="{{option}}"
+                style="margin-right: 16px"
+                onchange="handleChangeMul(this)"
+              />
+              <p>{{option}}</p>
+            </div>
+          </div>
+          <button id="prosegui" disabled>Prosegui</button>
+        </form>
+      </div> -->
+
+      <div class="risOrdinamento rightCont">
+        <p class="domanda">
+          Comunicare le questioni riguardanti l'HSE con lo staff.<br />
+          Qual è l’iter da seguire?
+        </p>
+        <p class="apice">Ordina le azioni dalla prima all’ultima</p>
+        <form action="#">
+          <div class="containerRisposte" ng-init="num = [1, 2, 3, 4]">
+            <div class="risposte" id="risposte" ng-repeat="option in options">
+              <select
+                class="mySelect"
+                id="select"
+                onchange="updateSelects(this)"
+              >
+                <option disabled selected value></option>
+                <option ng-repeat="n in [1,2,3,4]">{{n}}</option>
+              </select>
+              <p style="margin: 0">{{option}}</p>
+            </div>
+          </div>
+          <button id="prosegui" disabled>Prosegui</button>
+        </form>
       </div>
     </div>
   </body>
-  <script>
-    function handleChange(input) {
-      // Rimuovi la classe "selected" da tutti i div con classe "risposte"
-      var risposte = document.querySelectorAll(".risposte");
-      for (var i = 0; i < risposte.length; i++) {
-        risposte[i].classList.remove("selected");
-      }
-
-      // Aggiungi la classe "selected" al div di appartenenza dell'input selezionato
-      var parentDiv = input.parentElement;
-      parentDiv.classList.add("selected");
-
-      var button = document.getElementById("prosegui");
-      button.removeAttribute("disabled");
-      button.classList.add("active");
-    }
-  </script>
 </html>

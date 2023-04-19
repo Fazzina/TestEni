@@ -17,7 +17,7 @@ body {
   background: #f6f6f6;
   margin: 0;
   height: auto;
-  zdisplay: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -35,7 +35,7 @@ body {
 
   /* Auto layout */
 
-  zpadding: 0px 8px;
+  /* padding: 0px 8px; */
   gap: 10px;
 
   background: #1c1c1b;
@@ -96,11 +96,12 @@ body {
 }
 
 #nDomanda {
-  position: absolute;
+  /* position: absolute;
   left: 22.36%;
   right: 73.4%;
   top: 22.16%;
-  bottom: 71.75%;
+  bottom: 71.75%; */
+  margin: 48px 0 0 77px;
 
   /* H1 */
 
@@ -115,8 +116,8 @@ body {
   color: #dfe0e1;
 }
 
-.risSingola {
-  margin-left: 162px;
+.rightCont {
+  margin-left: 24px;
   margin-top: 69px;
 }
 
@@ -178,33 +179,8 @@ body {
   border-radius: 2px;
 }
 
-input[type="radio"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 0;
-  padding: 0;
-  border: 1px solid #1c1c1b;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-}
-
-input[type="radio"]:checked:before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #ffd401;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.risSingola button {
+/*Prosegui*/
+.rightCont button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -228,17 +204,155 @@ input[type="radio"]:checked:before {
   cursor: pointer;
 }
 
-.risSingola .selected {
+.rightCont .selected {
   background-color: #1c1c1b;
   color: #ffffff;
 }
 
-input[type="radio"]:checked {
-  border: 1px solid #ffffff;
-}
-
-.risSingola .active {
+.rightCont .active {
   background: #ffd401;
   color: #333333;
   border: none;
 }
+
+.risSingola input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #1c1c1b;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}
+
+.risSingola input[type="radio"]:checked:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffd401;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.risSingola input[type="radio"]:checked {
+  border: 1px solid #ffffff;
+}
+
+.risMultipla input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}
+
+.risMultipla input[type="checkbox"]:checked:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #ffd401;
+  border: 0.5px solid #ffffff;
+  border-radius: 2px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.risMultipla input[type="checkbox"]:checked {
+  border: 1px solid #ffffff;
+}
+
+.risOrdinamento .risposte {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 18px 16px;
+  gap: 4px;
+  max-height: 76px;
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+}
+
+.mySelect {
+  text-align: center;
+  margin-right: 24px;
+  /* padding: 20px 24px; */
+  padding-right: 25px;
+  gap: 20px;
+  width: 50px;
+  height: 40px;
+  background-color: #333333;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  background: #333333 url("../pngs/dropdownarrow.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.3em top 50%, 0 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.mySelect:focus {
+  border: none;
+}
+
+.mySelect::-ms-expand {
+  display: none;
+}
+
+.mySelect::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.risOrdinamento .selected {
+  background: #1c1c1b;
+  color: #ffffff;
+}
+
+.risOrdinamento select.selected {
+  background: #ffd401 url("../pngs/dropdownarrowblack.svg");
+  color: #1c1c1b;
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.3em top 50%, 0 0;
+}
+
+.risOrdinamento option {
+  text-align: center;
+}
+
+/* .mySelect::after {
+  content: url("../pngs/dropdownarrow.svg");
+  position: absolute;
+  right: 10px;
+} */
+
+/* .mySelect option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+} */
